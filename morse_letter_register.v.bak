@@ -1,0 +1,9 @@
+module morse_letter_register #(N) #(Code) (
+	input [N-1:0] index,
+	output reg data_out);
+	
+	always @(clk) begin
+		data_out = Code[index];
+	end
+	
+endmodule

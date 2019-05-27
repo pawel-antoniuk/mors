@@ -1,0 +1,166 @@
+|Morse_code
+clock => clock.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+KEY[0] => en.IN0
+KEY[0] => _.IN1
+KEY[0] => en.DATAA
+KEY[1] => en.IN1
+LEDR[0] <= mux_8_1_2:mux.port4
+LEDR[1] <= mux_8_1_2:mux.port4
+
+
+|Morse_code|counter_mod_M:counter
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+enable => Q.OUTPUTSELECT
+enable => Q.OUTPUTSELECT
+enable => Q.OUTPUTSELECT
+enable => Q.OUTPUTSELECT
+areset => Q[0]~reg0.ACLR
+areset => Q[1]~reg0.ACLR
+areset => Q[2]~reg0.ACLR
+areset => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rollover <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_A
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_B
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_C
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_D
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_E
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_F
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_G
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|morse_letter_register:reg_H
+index[0] => LessThan0.IN8
+index[0] => Add0.IN4
+index[1] => LessThan0.IN7
+index[1] => Add0.IN3
+index[2] => LessThan0.IN6
+index[2] => Add0.IN2
+index[3] => LessThan0.IN5
+index[3] => Add0.IN1
+data_out <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+done <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Morse_code|mux_8_1_2:mux
+x1[0] => Mux1.IN7
+x1[1] => Mux1.IN6
+x1[2] => Mux1.IN5
+x1[3] => Mux1.IN4
+x1[4] => Mux1.IN3
+x1[5] => Mux1.IN2
+x1[6] => Mux1.IN1
+x1[7] => Mux1.IN0
+x2[0] => Mux0.IN7
+x2[1] => Mux0.IN6
+x2[2] => Mux0.IN5
+x2[3] => Mux0.IN4
+x2[4] => Mux0.IN3
+x2[5] => Mux0.IN2
+x2[6] => Mux0.IN1
+x2[7] => Mux0.IN0
+s[0] => Mux0.IN10
+s[0] => Mux1.IN10
+s[1] => Mux0.IN9
+s[1] => Mux1.IN9
+s[2] => Mux0.IN8
+s[2] => Mux1.IN8
+en => y.OUTPUTSELECT
+en => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
